@@ -10,29 +10,33 @@ test("企業向けの入口を施設検索ではなく仕事相談にする", as
     readFile(new URL("app.js", publicRoot), "utf8"),
   ]);
 
-  assert.match(html, /仕事の相談から納品までを一本化/);
-  assert.match(app, /人手が足りない仕事/);
-  assert.match(app, /相談内容を整理する/);
-  assert.match(app, /案件仕様・たたき台/);
+  assert.match(html, /手が回らない仕事を、相談から納品まで/);
+  assert.match(app, /手が回らない仕事を/);
+  assert.match(app, /どんな仕事を依頼したいですか/);
+  assert.match(app, /現在確認できていること/);
+  assert.match(html, /brand-icon-v1\.png/);
+  assert.match(app, /hero-shigotopass-role-v1\.png/);
   assert.doesNotMatch(html, /対応できる就労支援施設を探/);
   assert.doesNotMatch(app, /条件に合う順|施設を比較する/);
+  assert.doesNotMatch(app, /人手が足りない仕事|曖昧な相談から作業を整理|施設を紹介して終わり|作業名より/);
 });
 
-test("運営介在型BPOと実行ネットワークの説明を含む", async () => {
+test("相談から納品までを利用者に分かる言葉で説明する", async () => {
   const app = await readFile(new URL("app.js", publicRoot), "utf8");
 
-  assert.match(app, /実行体制編成/);
-  assert.match(app, /進行管理/);
-  assert.match(app, /検品・納品/);
-  assert.match(app, /一括納品/);
-  assert.match(app, /就労継続支援A型・B型事業所を中心/);
-  assert.match(app, /現在は構想・実証準備段階です/);
+  assert.match(app, /仕事内容を確認/);
+  assert.match(app, /作業先を手配/);
+  assert.match(app, /進み具合を確認/);
+  assert.match(app, /検品して納品/);
+  assert.match(app, /連絡窓口を一本化/);
+  assert.match(app, /現在はサービス準備中です/);
+  assert.doesNotMatch(app, /実行体制編成|複数拠点へ分配|一括納品/);
 });
 
 test("旧版と混在しないよう公開アセット名を世代分けする", async () => {
   const html = await readFile(new URL("index.html", publicRoot), "utf8");
 
-  assert.match(html, /href="bpo-v3\.css"/);
-  assert.match(html, /src="data-v3\.js"/);
-  assert.match(html, /src="app-v3\.js"/);
+  assert.match(html, /href="bpo-v4\.css"/);
+  assert.match(html, /src="data-v4\.js"/);
+  assert.match(html, /src="app-v4\.js"/);
 });
