@@ -3,23 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>シゴトパス｜仕事から探せる業務マッチング</title>
-  <meta name="description" content="頼みたい仕事から、対応できる就労支援施設を探して比較・相談できる業務マッチングポータルです。">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="overrides.css">
+  <title>シゴトパス｜仕事の相談から納品までを一本化</title>
+  <meta name="description" content="人手が足りない業務を相談から仕様化、実行体制づくり、検品、納品までまとめるBPOサービスです。">
+  <meta property="og:title" content="シゴトパス｜仕事を、できる形に。">
+  <meta property="og:description" content="相談から案件設計・実行・検品・納品までを一本化するBPOサービス。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sou-hajime.github.io/shigoto-pass/">
+  <meta property="og:image" content="https://sou-hajime.github.io/shigoto-pass/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="シゴトパス｜仕事を、できる形に。">
+  <meta name="twitter:description" content="相談から案件設計・実行・検品・納品までを一本化するBPOサービス。">
+  <meta name="twitter:image" content="https://sou-hajime.github.io/shigoto-pass/og.png">
+  <link rel="stylesheet" href="bpo.css">
 </head>
 <body>
-  <div class="demo-banner" role="status"><b>画面確認用デモ</b><span>掲載施設・実績・料金・受付状況はすべて架空です。入力内容は送信・保存されません。</span></div>
-  <header class="header">
-    <a class="brand" href="#home" aria-label="トップへ"><span class="mark">パ</span><span>シゴトパス<small>企業×地域の業務マッチング</small></span></a>
-    <nav><a href="#search">仕事を探す</a><a href="#onboarding">登録・掲載の流れ</a><a href="#pricing">料金</a><button class="link-btn" data-action="guided">依頼内容を整理</button></nav>
-    <div class="header-actions"><button class="ghost" data-action="facility">仕事を受けたい施設の方</button><button class="primary" data-action="quote">仕事を相談する</button></div>
-    <button class="menu" data-action="mobilemenu" aria-label="メニューを開く">☰</button>
+  <div class="demo-banner" role="status"><b>構想確認用デモ</b><span>表示内容・料金・実績・受付状況は検討中です。入力内容は送信・保存されません。</span></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="シゴトパス トップへ"><span class="brand-mark">パ</span><span>シゴトパス<small>仕事を、できる形に。</small></span></a>
+    <nav aria-label="メインメニュー"><a href="#services">対応業務</a><a href="#managed">仕組み</a><a href="#quality">品質管理</a><a href="#network">実行拠点の方へ</a></nav>
+    <div class="header-actions"><button class="button secondary" data-action="facility">実行拠点として参加</button><button class="button primary" data-action="consult">仕事を相談する</button></div>
+    <button class="menu-button" data-action="menu" aria-label="メニューを開く">☰</button>
   </header>
   <main id="app"></main>
-  <div id="compareBar" class="compare-bar" aria-live="polite"></div>
   <div id="modalRoot"></div>
-  <footer><div class="brand inverse"><span class="mark">パ</span><span>シゴトパス<small>企業×地域の業務マッチング</small></span></div><p>仕事の外注を、もっと身近に。地域の力を、企業の力に。</p><div class="footer-links"><span>運営会社情報（準備中）</span><span>利用規約（準備中）</span><span>プライバシーポリシー（準備中）</span><span>苦情・相談窓口（準備中）</span></div><small>© 2026 シゴトパス — フロントエンドデモ</small></footer>
-  <script src="data.js"></script><script src="app.js"></script>
+  <footer>
+    <div><a class="brand inverse" href="#home"><span class="brand-mark">パ</span><span>シゴトパス<small>仕事を、できる形に。</small></span></a><p>企業の業務課題と、地域の実行力をつなぐBPO受注基盤。</p></div>
+    <div class="footer-nav"><span>運営会社情報（準備中）</span><span>利用規約（準備中）</span><span>プライバシーポリシー（準備中）</span><span>お問い合わせ（準備中）</span></div>
+    <small>© 2026 シゴトパス — 構想確認用デモ</small>
+  </footer>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

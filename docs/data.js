@@ -2,8 +2,8 @@ const CATEGORIES = [
   { id: "label", name: "シール・ラベル貼り", icon: "🏷️", desc: "商品ラベル、訂正シール、宛名貼付", keywords: ["シール", "ラベル", "タグ"] },
   { id: "packing", name: "袋詰め・梱包", icon: "📦", desc: "封入、セット組み、箱詰め、検品", keywords: ["袋", "梱包", "箱詰", "封入", "セット", "検品"] },
   { id: "dm", name: "DM・発送", icon: "✉️", desc: "仕分け、封入、宛名貼り、発送", keywords: ["dm", "発送", "配送", "郵便", "チラシ"] },
-  { id: "data", name: "データ入力", icon: "⌨️", desc: "名刺、アンケート、商品情報の入力", keywords: ["データ", "入力", "名刺", "ocr", "商品登録"] },
-  { id: "sns", name: "SNS・画像制作", icon: "🎨", desc: "投稿画像、バナー、写真加工", keywords: ["sns", "画像", "バナー", "canva", "デザイン"] },
+  { id: "data", name: "データ入力・書類電子化", icon: "⌨️", desc: "入力、転記、スキャン、PDF化、書類整理", keywords: ["データ", "入力", "転記", "名刺", "アンケート", "ocr", "スキャン", "pdf", "書類", "商品登録"] },
+  { id: "sns", name: "EC・デジタル業務", icon: "🎨", desc: "EC登録、画像整理、AI用データ、投稿補助", keywords: ["ec", "商品情報", "商品登録", "sns", "投稿", "画像", "バナー", "canva", "ai", "教師データ", "デザイン"] },
   { id: "clean", name: "清掃", icon: "🧹", desc: "オフィス、店舗、共用部、草刈り", keywords: ["清掃", "掃除", "草刈", "除草"] }
 ];
 
