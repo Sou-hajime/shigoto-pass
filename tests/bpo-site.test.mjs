@@ -28,3 +28,11 @@ test("運営介在型BPOと実行ネットワークの説明を含む", async ()
   assert.match(app, /就労継続支援A型・B型事業所を中心/);
   assert.match(app, /現在は構想・実証準備段階です/);
 });
+
+test("旧版と混在しないよう公開アセット名を世代分けする", async () => {
+  const html = await readFile(new URL("index.html", publicRoot), "utf8");
+
+  assert.match(html, /href="bpo-v3\.css"/);
+  assert.match(html, /src="data-v3\.js"/);
+  assert.match(html, /src="app-v3\.js"/);
+});
