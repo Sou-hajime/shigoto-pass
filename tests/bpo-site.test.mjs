@@ -33,6 +33,18 @@ test("相談から納品までを利用者に分かる言葉で説明する", as
   assert.doesNotMatch(app, /実行体制編成|複数拠点へ分配|一括納品/);
 });
 
+test("利用場面から使い方とメリットを具体的に説明する", async () => {
+  const app = await readFile(new URL("app.js", publicRoot), "utf8");
+
+  assert.match(app, /入力作業がたまり、本来の仕事に手が回らない/);
+  assert.match(app, /キャンペーン前だけ、大量の作業が発生する/);
+  assert.match(app, /ECサイトの更新が後回しになっている/);
+  assert.match(app, /シゴトパスの使い方/);
+  assert.match(app, /相談先を一本化/);
+  assert.match(app, /必要なときだけ依頼/);
+  assert.match(app, /納品まで任せられる/);
+});
+
 test("旧版と混在しないよう公開アセット名を世代分けする", async () => {
   const html = await readFile(new URL("index.html", publicRoot), "utf8");
 
